@@ -73,17 +73,97 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Consultas\CMiembro.aspx" />
+    <Content Include="Consultas\CRenta.aspx" />
+    <Content Include="Consultas\CUsuario.aspx" />
+    <Content Include="Consultas\CVideoJuego.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Registros\RMiembro.aspx" />
+    <Content Include="Registros\RRenta.aspx" />
+    <Content Include="Registros\RUsuario.aspx" />
+    <Content Include="Registros\RVideoJuego.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\CMiembro.aspx.cs">
+      <DependentUpon>CMiembro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\CMiembro.aspx.designer.cs">
+      <DependentUpon>CMiembro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\CRenta.aspx.cs">
+      <DependentUpon>CRenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\CRenta.aspx.designer.cs">
+      <DependentUpon>CRenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\CUsuario.aspx.cs">
+      <DependentUpon>CUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\CUsuario.aspx.designer.cs">
+      <DependentUpon>CUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\CVideoJuego.aspx.cs">
+      <DependentUpon>CVideoJuego.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\CVideoJuego.aspx.designer.cs">
+      <DependentUpon>CVideoJuego.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registros\RMiembro.aspx.cs">
+      <DependentUpon>RMiembro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\RMiembro.aspx.designer.cs">
+      <DependentUpon>RMiembro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\RRenta.aspx.cs">
+      <DependentUpon>RRenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\RRenta.aspx.designer.cs">
+      <DependentUpon>RRenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\RUsuario.aspx.cs">
+      <DependentUpon>RUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\RUsuario.aspx.designer.cs">
+      <DependentUpon>RUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\RVideoJuego.aspx.cs">
+      <DependentUpon>RVideoJuego.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\RVideoJuego.aspx.designer.cs">
+      <DependentUpon>RVideoJuego.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
