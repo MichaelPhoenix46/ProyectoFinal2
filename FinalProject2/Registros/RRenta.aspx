@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RRenta.aspx.cs" Inherits="FinalProject2.Registros.RRenta" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RRenta.aspx.cs" Inherits="FinalProject2.Registros.RRenta" %>
 
 <!DOCTYPE html>
 

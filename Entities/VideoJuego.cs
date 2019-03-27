@@ -15,7 +15,7 @@ namespace Entities
         public string Titulo { get; set; }
         public String Descripcion { get; set; }
         public String Plataforma { get; set; }
-        public DateTime Lanzamiento { get; set; }
+        //public DateTime Lanzamiento { get; set; }
         public String Genero { get; set; }
         public DateTime FechaRegistro { get; set; }
         public int CantidadEjemplares { get; set; }
@@ -27,19 +27,19 @@ namespace Entities
             Titulo = string.Empty;
             Descripcion = string.Empty;
             Plataforma = string.Empty;
-            Lanzamiento = DateTime.Now;
+            //Lanzamiento = DateTime.Now;
             Genero = string.Empty;
             FechaRegistro = DateTime.Now;
             CantidadEjemplares = 0;
         }
 
-        public VideoJuego(int videoJuegoId, string titulo, string descripcion, string plataforma, DateTime lanzamiento, string genero, DateTime fchaRegistro, int cantidadEjemplares)
+        public VideoJuego(int videoJuegoId, string titulo, string descripcion, string plataforma/*, DateTime lanzamiento*/, string genero, DateTime fchaRegistro, int cantidadEjemplares)
         {
             VideoJuegoId = videoJuegoId;
             Titulo = titulo;
             Descripcion = descripcion;
             Plataforma = plataforma;
-            Lanzamiento = lanzamiento;
+            //Lanzamiento = lanzamiento;
             Genero = genero;
             FechaRegistro = fchaRegistro;
             CantidadEjemplares = cantidadEjemplares;
