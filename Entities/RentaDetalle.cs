@@ -16,8 +16,6 @@ namespace Entities
         public int VideoJuegoId { get; set; }
         public string Titulo { get; set; }
 
-
-
         [ForeignKey("VideoJuegoId")]
         public virtual VideoJuego VideoJuego { get; set; }
 
@@ -33,12 +31,6 @@ namespace Entities
         {
             DetalleId = 0;
             RentaId = 0;
-
-
         }
-
-
-
     }
-
 }

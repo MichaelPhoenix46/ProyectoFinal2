@@ -17,7 +17,6 @@ namespace Entities
         public string Telefono { get; set; }
         public DateTime FechaRegistro { get; set; }
 
-
         public Miembro()
         {
             MiembroId = 0;
@@ -26,10 +25,6 @@ namespace Entities
             Direccion = string.Empty;
             Telefono = string.Empty;
             FechaRegistro = DateTime.Now;
-
         }
-
-
-
     }
 }
