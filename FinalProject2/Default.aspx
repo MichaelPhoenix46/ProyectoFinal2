@@ -1,15 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="FinalProject2._default" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="FinalProject2.Default" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
+<asp:Content ID="Content4" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="panel">
+        <div class="jumbotron">
+            <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: black"><strong>Phoenix Rentals</strong></h2>
         </div>
-    </form>
-</body>
-</html>
+    </div>
+</asp:Content>

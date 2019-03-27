@@ -33,9 +33,9 @@ namespace Entities
             Detalles = new List<RentaDetalle>();
         }
 
-        public void AgregarDetalle(int detalleId, int rentaId, int videoJuegoId, string titulo)
+        public void AgregarDetalle(int rentaId, int videoJuegoId, string titulo)
         {
-            Detalles.Add(new RentaDetalle(detalleId, rentaId, videoJuegoId, titulo));
+            Detalles.Add(new RentaDetalle(rentaId, videoJuegoId, titulo));
         }
     }
 }

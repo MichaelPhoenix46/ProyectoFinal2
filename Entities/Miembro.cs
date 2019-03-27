@@ -11,9 +11,9 @@ namespace Entities
     {
         [Key]
         public int MiembroId { get; set; }
-        public String Nombre { get; set; }
-        public String Cedula { get; set; }
-        public String Direccion { get; set; }
+        public string Nombre { get; set; }
+        public string Cedula { get; set; }
+        public string Direccion { get; set; }
         public string Telefono { get; set; }
         public DateTime FechaRegistro { get; set; }
 
