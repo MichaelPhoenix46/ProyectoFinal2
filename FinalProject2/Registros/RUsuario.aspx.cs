@@ -50,7 +50,7 @@ namespace FinalProject2.Registros
             usuario.Password = PasswordTextBox.Text;
             return usuario;
         }
-        private void Nuevobutton_Click(object sender, EventArgs e)
+        protected void Nuevobutton_Click(object sender, EventArgs e)
         {
             Limpiar();
         }
