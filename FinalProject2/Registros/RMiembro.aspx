@@ -21,8 +21,8 @@
                 <label for="NombreTextBox" class="col-md-3 control-label input-sm" style="font-size: large">Nombre</label>
                 <div class="col-md-3">
                     <asp:TextBox ID="NombreTextBox" runat="server" class="form-control input-sm" Style="font-size: large"></asp:TextBox>
-                  <%--  <asp:RequiredFieldValidator ID="ValidaNombre" runat="server" ErrorMessage="El campo &quot;Nombre&quot; Esta vacio" ControlToValidate="NombreTextBox" ForeColor="Red" Display="Dynamic" ToolTip="Campo Nombre es obligatorio" ValidationGroup="Guardar">*</asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="ValidaNombre2" runat="server" ErrorMessage='El Campo &quot;nombre&quot; solo acepta letras' ControlToValidate="NombreTextBox" ValidationExpression="^[A-Za-z ]*" ForeColor="Red" Display="Dynamic" ToolTip="Entrada no valida" ValidationGroup="Guardar">*</asp:RegularExpressionValidator>--%>
+                    <asp:RequiredFieldValidator ID="ValidaNombre" runat="server" ErrorMessage="El campo &quot;Nombre&quot; Esta vacio" ControlToValidate="NombreTextBox" ForeColor="Red" Display="Dynamic" ToolTip="Campo Nombre es obligatorio" ValidationGroup="Guardar">*</asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="ValidaNombre2" runat="server" ErrorMessage='El Campo &quot;nombre&quot; solo acepta letras' ControlToValidate="NombreTextBox" ValidationExpression="^[A-Za-z ]*" ForeColor="Red" Display="Dynamic" ToolTip="Entrada no valida" ValidationGroup="Guardar">*</asp:RegularExpressionValidator>
 
                 </div>
                 <label for="CedulaTextBox" class="col-md-1 control-label input-sm" style="font-size: large">Cedula</label>

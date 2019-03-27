@@ -14,17 +14,17 @@ namespace FinalProject2.Registros
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
-            {
-                int id = Utils.ToInt(Request.QueryString["id"]);
-                if (id > 0)
-                {
-                    RepositorioBase<Miembro> repositorio = new RepositorioBase<Miembro>();
-                    var registro = repositorio.Buscar(id);
-                    LlenaCampos(registro);
+            //if (!Page.IsPostBack)
+            //{
+            //    int id = Utils.ToInt(Request.QueryString["id"]);
+            //    if (id > 0)
+            //    {
+            //        RepositorioBase<Miembro> repositorio = new RepositorioBase<Miembro>();
+            //        var registro = repositorio.Buscar(id);
+            //        LlenaCampos(registro);
 
-                }
-            }
+            //    }
+            //}
         }
 
         private void Limpiar()
@@ -40,7 +40,7 @@ namespace FinalProject2.Registros
         private Miembro LlenaClase(Miembro miembro)
         {
             miembro.MiembroId = Utils.ToInt(MiembroIdTextBox.Text);
-            miembro.Nombre = MiembroIdTextBox.Text;
+            miembro.Nombre = NombreTextBox.Text;
             miembro.FechaRegistro = DateTime.Now;
             miembro.Telefono = TelefonoTextBox.Text;
             miembro.Direccion = DireccionTextBox.Text;
