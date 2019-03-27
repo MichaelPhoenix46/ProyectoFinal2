@@ -17,7 +17,7 @@ namespace Entities
         public string Telefono { get; set; }
         public string Cedula { get; set; }
         public string Password { get; set; }
-        public string Tipo { get; set; }
+        //public string Tipo { get; set; }
         public DateTime FechaRegistro { get; set; }
 
         public Usuario()
@@ -28,11 +28,11 @@ namespace Entities
             Telefono = string.Empty;
             Cedula = string.Empty;
             Password = string.Empty;
-            Tipo = string.Empty;
+            //Tipo = string.Empty;
             FechaRegistro = DateTime.Now;
         }
 
-        public Usuario(int usuarioId, string userName, string nombre, string telefono, string cedula, string password, string tipo, DateTime fechaRegistro)
+        public Usuario(int usuarioId, string userName, string nombre, string telefono, string cedula, string password, /*string tipo,*/ DateTime fechaRegistro)
         {
             UsuarioId = usuarioId;
             UserName = userName;
@@ -40,7 +40,7 @@ namespace Entities
             Telefono = telefono;
             Cedula = cedula;
             Password = password;
-            Tipo = tipo;
+            //Tipo = tipo;
             FechaRegistro = fechaRegistro;
         }
     }

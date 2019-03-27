@@ -41,18 +41,14 @@ namespace FinalProject2.Registros
         }
         private Usuario LlenaClase(Usuario usuario)
         {
-            usuario.UsuarioId = Convert.ToInt32(UsuarioIdTextBox.Text);
+            usuario.UsuarioId = Utils.ToInt(UsuarioIdTextBox.Text);
             usuario.Nombre = NombreTextBox.Text;
-            usuario.FechaRegistro = Convert.ToDateTime(FechaTextBox.Text);
+            usuario.FechaRegistro = DateTime.Now;
             usuario.Telefono = TelefonoTextBox.Text;
             usuario.UserName = NombreUsuarioTextBox.Text;
             usuario.Cedula = CedulaTextBox.Text;
             usuario.Password = PasswordTextBox.Text;
             return usuario;
-        }
-        protected void Nuevobutton_Click(object sender, EventArgs e)
-        {
-            Limpiar();
         }
         protected void GuardarButton_Click(object sender, EventArgs e)
         {
@@ -102,6 +98,12 @@ namespace FinalProject2.Registros
             }
             else
                 Utils.ShowToastr(this.Page, "El usuario que intenta buscar no existe", "Error", "error");
+        }
+
+
+        protected void NuevoButton_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
     }
 }

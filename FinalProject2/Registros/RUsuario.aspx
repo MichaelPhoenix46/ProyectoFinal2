@@ -13,7 +13,7 @@
                 </div>
                 <asp:RegularExpressionValidator ID="ValidaID" runat="server" ErrorMessage='El Campo &quot;ID&quot; solo acepta numeros' ControlToValidate="UsuarioIdTextBox" ValidationExpression="^[0-9]*$" Text="*" ForeColor="Red" Display="Dynamic" ToolTip="Entrada no valida" ValidationGroup="Guardar"></asp:RegularExpressionValidator>
                 <div class="col-md-1 col-sm-2 col-xs-4">
-                    <asp:Button ID="BuscarButton" runat="server" Text="Buscar" class="btn btn-info btn-sm" onclick="buscarbutton_click" />
+                    <asp:Button ID="BuscarButton" runat="server" Text="Buscar" class="btn btn-info btn-sm" OnClick="BuscarButton_Click"/>
                 </div>
             </div>
             <div class="form-group">
@@ -50,7 +50,7 @@
                 <div class="col-md-7">
                     <asp:TextBox ID="DireccionTextBox" runat="server" class="form-control input-sm" Style="font-size: large"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="ValidaDireccion" runat="server" ErrorMessage="El campo &quot;Direccion&quot; Esta vacio" ControlToValidate="DireccionTextBox" ForeColor="Red" Display="Dynamic" ToolTip="Campo Direccion es obligatorio" ValidationGroup="Guardar">*</asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="ValidaDireccion2" runat="server" ErrorMessage='El Campo &quot;Direccion&quot; solo acepta letras' ControlToValidate="DireccionTextBox" ValidationExpression="[^A-Za-z0-9#]*$" Text="*" ForeColor="Red" Display="Dynamic" ToolTip="Entrada no valida" ValidationGroup="Guardar"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="ValidaDireccion2" runat="server" ErrorMessage='El Campo &quot;Direccion&quot; solo acepta letras' ControlToValidate="DireccionTextBox" ValidationExpression="^[A-Za-z0-9#]*$" Text="*" ForeColor="Red" Display="Dynamic" ToolTip="Entrada no valida" ValidationGroup="Guardar"></asp:RegularExpressionValidator>
                 </div>
             </div>
 
@@ -62,12 +62,11 @@
         <div class="panel">
             <div class="text-center">
                 <div class="form-group">
-                    <asp:Button ID="NuevoButton" runat="server" Text="Nuevo" class="btn btn-primary btn-md"OnClick="NuevoButton_Click" />
-                    <asp:Button ID="GuardarButton" runat="server" Text="Guardar" class="btn btn-success btn-md" ValidationGroup="Guardar"OnClick="GuardarButton_Click" />
+                    <asp:Button ID="NuevoButton" runat="server" Text="Nuevo" class="btn btn-primary btn-md" OnClick="NuevoButton_Click" />
+                        <asp:Button ID="GuardarButton" runat="server" Text="Guardar" class="btn btn-success btn-md" ValidationGroup="Guardar" OnClick="GuardarButton_Click"/>
                     <asp:Button ID="EliminarButton" runat="server" Text="Eliminar" class="btn btn-danger btn-md" OnClick="EliminarButton_Click"/>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </asp:Content>

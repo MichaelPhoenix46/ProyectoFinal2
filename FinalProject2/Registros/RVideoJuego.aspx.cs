@@ -40,12 +40,13 @@ namespace FinalProject2.Registros
         }
         private VideoJuego LlenaClase(VideoJuego videoJuego)
         {
-            videoJuego.VideoJuegoId = Convert.ToInt32(VideoJuegoIdTextBox.Text);
+            videoJuego.VideoJuegoId = Utils.ToInt(VideoJuegoIdTextBox.Text);
             videoJuego.Titulo = TituloTextBox.Text;
-            videoJuego.FechaRegistro = Convert.ToDateTime(FechaTextBox.Text);
+            videoJuego.FechaRegistro = DateTime.Now;
             videoJuego.Descripcion = descripcionTextBox.Text;
             videoJuego.Genero = GeneroTextBox.Text;
             videoJuego.Plataforma = PlataformaTextBox.Text;
+            videoJuego.CantidadEjemplares = Convert.ToInt32(CantidadEjemplaresTextBox.Text);
             return videoJuego;
         }
 
