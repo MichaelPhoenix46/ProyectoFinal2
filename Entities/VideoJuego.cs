@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-
+    [Serializable]
     public class VideoJuego
     {
         [Key]

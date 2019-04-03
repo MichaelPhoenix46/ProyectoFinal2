@@ -96,7 +96,7 @@ namespace FinalProject2.Registros
                 Utils.ShowToastr(this.Page, "Eliminado con exito!!", "Eliminado", "info");
             }
             else
-                Utils.ShowToastr(this.Page, "Fallo al Eliminar :(", "Error", "error");
+                Utils.ShowToastr(this.Page, "Fallo al Eliminar ", "Error", "error");
             Limpiar();
         }
 
@@ -113,7 +113,7 @@ namespace FinalProject2.Registros
                 Utils.ShowToastr(this, "Busqueda exitosa", "Exito", "success");
             }
             else
-                Utils.ShowToastr(this.Page, "El usuario que intenta buscar no existe", "Error", "error");
+                Utils.ShowToastr(this.Page, "El Miembro que intenta buscar no existe", "Error", "error");
         }
     }
 }

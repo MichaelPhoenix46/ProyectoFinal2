@@ -59,7 +59,7 @@
 <body>
     <form id="form1" runat="server">
 
-        <nav class="navbar navbar-default" style="background-color: #ff6a00">
+        <nav class="navbar navbar-default" style="background-color: #2ecc71">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">

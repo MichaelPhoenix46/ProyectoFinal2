@@ -31,6 +31,8 @@ namespace FinalProject2.Utilidades
             return retorno;
         }
 
+
+
         public static void ShowToastr(this Page page, string message, string title, string type = "info")
         {
 

@@ -1,5 +1,6 @@
 ﻿using BLL;
 using Entities;
+using FinalProject2.Utilidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,39 +13,88 @@ namespace FinalProject2.Consultas
 {
     public partial class CMiembro : System.Web.UI.Page
     {
+        Expression<Func<Miembro, bool>> filtro = x => true;
+        RepositorioBase<Miembro> repositorio = new RepositorioBase<Miembro>();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            Buscar();
+            //Desde.ReadOnly = true;
+            //Hasta.ReadOnly = true;
+
+            Desde.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            Hasta.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            
+
         }
+
 
         private void Buscar()
         {
-            Expression<Func<Miembro, bool>> filtro = x => true;
-            RepositorioBase<Miembro> repositorio = new RepositorioBase<Miembro>();
 
+            DateTime desde = DateTime.Parse(Desde.Text);
+            DateTime hasta = DateTime.Parse(Hasta.Text);
             int id;
             switch (FiltroDropDownList.SelectedIndex)
             {
-                case 0: //Todo
+                case 0: //Todo                 
                     repositorio.GetList(c => true);
                     break;
                 case 1://MiembroId
-                    id = Utilidades.Utils.ToInt(CriterioTextBox.Text);
-                    filtro = c => c.MiembroId == id;
-                    break;
+                    id = Utils.ToInt(CriterioTextBox.Text);
+                    if (FechaCheckBox.Checked == true)
+                    {
+                        filtro = c => c.MiembroId == id && (c.FechaRegistro >= desde && c.FechaRegistro <= hasta);
+                        break;
+                    }
+                    else
+                    {
+                        filtro = c => c.MiembroId == id;
+                        break;
+                    }
                 case 2://Nombre
-                    filtro = c => c.Nombre.Contains(CriterioTextBox.Text);
-                    break;
+                    if (FechaCheckBox.Checked == true)
+                    {
+                        filtro = c => c.Nombre.Contains(CriterioTextBox.Text) && (c.FechaRegistro >= desde && c.FechaRegistro <= hasta);
+                        break;
+                    }
+                    else
+                    {
+                        filtro = c => c.Nombre.Contains(CriterioTextBox.Text);
+                        break;
+                    }
                 case 3: //cedula
-                    filtro = c => c.Cedula.Contains(CriterioTextBox.Text);
-                    break;
+                    if (FechaCheckBox.Checked == true)
+                    {
+                        filtro = c => c.Cedula.Contains(CriterioTextBox.Text) && (c.FechaRegistro >= desde && c.FechaRegistro <= hasta);
+                        break;
+                    }
+                    else
+                    {
+                        filtro = c => c.Cedula.Contains(CriterioTextBox.Text);
+                        break;
+                    }
                 case 4: //Direcccion
-                    filtro = c => c.Direccion.Contains(CriterioTextBox.Text);
-                    break;
+                    if (FechaCheckBox.Checked == true)
+                    {
+                        filtro = c => c.Direccion.Contains(CriterioTextBox.Text) && (c.FechaRegistro >= desde && c.FechaRegistro <= hasta);
+                        break;
+                    }
+                    else
+                    {
+                        filtro = c => c.Direccion.Contains(CriterioTextBox.Text);
+                        break;
+                    }
                 case 5://telefono
-                    filtro = c => c.Telefono.Contains(CriterioTextBox.Text);
-                    break;
-
+                    if (FechaCheckBox.Checked == true)
+                    {
+                        filtro = c => c.Telefono.Contains(CriterioTextBox.Text) && (c.FechaRegistro >= desde && c.FechaRegistro <= hasta);
+                        break;
+                    }
+                    else
+                    {
+                        filtro = c => c.Telefono.Contains(CriterioTextBox.Text);
+                        break;
+                    }
             }
 
             DatosGridView.DataSource = repositorio.GetList(filtro);
@@ -55,5 +105,7 @@ namespace FinalProject2.Consultas
         {
             Buscar();
         }
+
+
     }
 }

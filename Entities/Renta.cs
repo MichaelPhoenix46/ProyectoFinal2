@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
+    [Serializable]
     public class Renta
     {
         [Key]
         public int RentaId { get; set; }
         public DateTime FechaRegistro { get; set; }
-        public int UsuarioId { get; set; }
         public int MiembroId { get; set; }
         public DateTime FechaDevuelta { get; set; }
         public decimal Devuelta { get; set; }    //Esta devuelta se refiere a devuelta de dinero
-        public decimal Pago { get; set; }
+        public decimal Pago { get; set; }//pago se refiere a lo que pago el cliente
         public decimal Importe { get; set; }
 
         /*[ForeignKey("MiembroId")]*/

@@ -58,7 +58,7 @@ namespace FinalProject2.Registros
 
             if (IsValid == false)
             {
-                Utils.ShowToastr(this.Page, "Revisar todos los campo", "Error", "error");
+                Utils.ShowToastr(this.Page, "Revisar todos los campos", "Error", "error");
                 return;
             }
 
@@ -81,7 +81,7 @@ namespace FinalProject2.Registros
                 Utils.ShowToastr(this.Page, "Eliminado con exito!!", "Eliminado", "info");
             }
             else
-                Utils.ShowToastr(this.Page, "Fallo al Eliminar :(", "Error", "error");
+                Utils.ShowToastr(this.Page, "Fallo al Eliminar", "Error", "error");
             Limpiar();
         }
         protected void BuscarButton_Click(object sender, EventArgs e)
@@ -97,7 +97,7 @@ namespace FinalProject2.Registros
                 Utils.ShowToastr(this, "Busqueda exitosa", "Exito", "success");
             }
             else
-                Utils.ShowToastr(this.Page, "El usuario que intenta buscar no existe", "Error", "error");
+                Utils.ShowToastr(this.Page, "El VideoJuego que intenta buscar no existe", "Error", "error");
         }
 
         protected void NuevoButton_Click(object sender, EventArgs e)

@@ -81,7 +81,7 @@ namespace FinalProject2.Registros
                 Utils.ShowToastr(this.Page, "Eliminado con exito!!", "Eliminado", "info");
             }
             else
-                Utils.ShowToastr(this.Page, "Fallo al Eliminar :(", "Error", "error");
+                Utils.ShowToastr(this.Page, "Fallo al Eliminar ", "Error", "error");
             Limpiar();
         }
         protected void BuscarButton_Click(object sender, EventArgs e)

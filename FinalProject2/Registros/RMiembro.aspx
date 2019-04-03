@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="panel" style="background-color: black">
-        <div class="panel-heading" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: medium; color: white">Registro de Miembros</div>
+        <div class="panel-heading" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: medium; color: #000000; background-color: #2ecc71;">Registro de Miembros</div>
     </div>
     <div class="panel-body">
         <div class="form-horizontal col-md-12" role="form">
