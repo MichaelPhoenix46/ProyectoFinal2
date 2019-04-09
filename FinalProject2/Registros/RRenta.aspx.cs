@@ -31,6 +31,7 @@ namespace FinalProject2.Registros
 
                 ViewState["Renta"] = new Renta();
 
+
             }
         }
 
