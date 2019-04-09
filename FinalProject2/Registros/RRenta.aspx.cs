@@ -12,12 +12,14 @@ namespace FinalProject2.Registros
 {
     public partial class RRenta : System.Web.UI.Page
     {
+        public static List<RentaDetalle> detalle = new List<RentaDetalle>();
+        RepositorioBase<Miembro> repositorioBase = new RepositorioBase<Miembro>();
+        RepositorioBase<VideoJuego> repositorioBasev = new RepositorioBase<VideoJuego>();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
-                RepositorioBase<Miembro> repositorioBase = new RepositorioBase<Miembro>();
-                RepositorioBase<VideoJuego> repositorioBasev = new RepositorioBase<VideoJuego>();
+
 
                 MiembroDropDownList.DataSource = repositorioBase.GetList(t => true);
                 MiembroDropDownList.DataValueField = "MiembroId";
@@ -27,10 +29,13 @@ namespace FinalProject2.Registros
                 JuegoDropDownList.DataSource = repositorioBasev.GetList(t => true);
                 JuegoDropDownList.DataValueField = "VideoJuegoId";
                 JuegoDropDownList.DataTextField = "Titulo";
+                MiembroDropDownList.DataBind();
                 JuegoDropDownList.DataBind();
 
                 ViewState["Renta"] = new Renta();
-
+                ViewState["Detalle"] = new RentaDetalle();
+                FechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
+                FechaDevueltaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
             }
         }
@@ -54,6 +59,7 @@ namespace FinalProject2.Registros
             renta.MiembroId = Convert.ToInt32(MiembroDropDownList.SelectedValue);
             renta.RentaId = Convert.ToInt32(RentaIdTextBox.Text);
             renta.Importe = Convert.ToDecimal(PagoTextBox.Text);
+            renta.Detalles = detalle;
 
 
             return renta;
@@ -65,10 +71,11 @@ namespace FinalProject2.Registros
             RentaIdTextBox.Text = "";
             FechaTextBox.Text = Convert.ToString(DateTime.Now);
             MiembroDropDownList.Text = string.Empty;
-            DevueltaTextBox.Text = Convert.ToString(DateTime.Today.AddDays(7));
+            DevueltaTextBox.Text = Convert.ToString(DateTime.Today);
             ImporteTextBox.Text = "";
             PagoTextBox.Text = "0";
             ViewState["Renta"] = new Renta();
+            DetalleGridView = null;
             this.BindGrid();
 
         }
@@ -150,15 +157,25 @@ namespace FinalProject2.Registros
 
         protected void AgregarButton_Click(object sender, EventArgs e)
         {
-            Renta renta = new Renta();
+            if (JuegoDropDownList.Text == string.Empty)
+                Utils.ShowToastr(this, "Debe crear al menos VideoJuego y seleccionarlo", "Warning");
+            else
+            {
+                Renta renta = new Renta();
 
-            renta = (Renta)ViewState["Renta"];
-            renta.AgregarDetalle(0, renta.RentaId,
-                    JuegoDropDownList.SelectedIndex, JuegoDropDownList.Text);
+                renta = (Renta)ViewState["Renta"];
+                renta.AgregarDetalle(0, renta.RentaId,
+                       Utils.ToInt(JuegoDropDownList.SelectedValue), JuegoDropDownList.Text);
 
-            ViewState["Renta"] = renta;
+                ViewState["Renta"] = renta;
 
-            this.BindGrid();
+                this.BindGrid();
+                int cuenta = detalle.Count();
+                ImporteTextBox.Text = Convert.ToString(cuenta * 50);
+
+
+                
+            }
         }
     }
 }

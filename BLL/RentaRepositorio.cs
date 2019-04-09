@@ -71,25 +71,26 @@ namespace BLL
         public override Renta Buscar(int id)
         {
             Renta renta = new Renta();
-            Contexto contexto = new Contexto();
             try
             {
-                renta = contexto.renta.Find(id);
+                renta = _contexto.renta.Find(id);
+
                 if (renta != null)
                 {
                     renta.Detalles.Count();
-                    foreach (var item in renta.Detalles)
-                    {
-                        string s = item.VideoJuego.Titulo;
-                    }
+
                 }
 
+
+
             }
-            catch (Exception) { throw; }
-            finally
+            catch (Exception)
             {
-                contexto.Dispose();
+                throw;
             }
+
+
+
             return renta;
         }
 
@@ -156,11 +157,11 @@ namespace BLL
             return usuario;
         }
 
-        public static string RetornarNombre(string nombre)
+        public static string RetornarNombre(int nombre)
         {
             RepositorioBase<VideoJuego> repositorio = new RepositorioBase<VideoJuego>();
             string descripcion = string.Empty;
-            var lista = repositorio.GetList(x => x.Titulo.Equals(nombre));
+            var lista = repositorio.GetList(x => x.VideoJuegoId.Equals(nombre));
             foreach (var item in lista)
             {
                 descripcion = item.Titulo;

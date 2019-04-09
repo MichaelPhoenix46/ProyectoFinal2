@@ -20,7 +20,7 @@ namespace Entities
         public decimal Importe { get; set; }
 
         /*[ForeignKey("MiembroId")]*/
-        public virtual ICollection<RentaDetalle> Detalles { get; set; }
+        public virtual List<RentaDetalle> Detalles { get; set; }
         public Renta()
         {
             this.RentaId = 0;
@@ -30,7 +30,7 @@ namespace Entities
             this.Devuelta = 0;
             this.Pago = 0;
             this.Importe = 0;
-            Detalles = new List<RentaDetalle>();
+            this.Detalles = new List<RentaDetalle>();
         }
 
         public void AgregarDetalle(int detalleId, int rentaId, int videoJuegoId, string titulo)

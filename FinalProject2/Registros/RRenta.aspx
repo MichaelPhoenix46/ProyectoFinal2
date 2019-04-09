@@ -36,7 +36,7 @@
                 </div>
 
             </div>
-            <div class="row">
+            <div class="row form-group col-md-8">
                 <asp:GridView ID="DetalleGridView" CssClass=" col-md-offset-4 col-sm-offset-4" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="244px" AutoGenerateColumns="true">
                     <AlternatingRowStyle BackColor="White" />
 
