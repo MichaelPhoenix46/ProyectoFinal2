@@ -34,7 +34,7 @@ namespace FinalProject2.Tests
             usuario.Nombre = "Jose";
             usuario.Telefono = "8093860441";
             usuario.Cedula = "11111111111";
-            usuario.UserName = "Phoenix";
+            usuario.UserName = "Root";
             usuario.Password = "123456";
 
             paso = repositorio.Guardar(usuario);
