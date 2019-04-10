@@ -24,6 +24,7 @@
             <asp:Button ID="BuscarButton" runat="server" Text="Buscar" class="btn btn-info btn-md" OnClick="BuscarButton_Click" />
         </div>
         <div class="col-md-1">
+            <label for="FechaCheckBox" class="col-md-1 control-label input-sm" style="font-size: large">Seleccionar para rango de fecha</label>
 
             <asp:CheckBox ID="FechaCheckBox" runat="server" />
         </div>
