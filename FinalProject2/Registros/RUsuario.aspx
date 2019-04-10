@@ -36,17 +36,17 @@
                 <a href="RUsuario.aspx">RUsuario.aspx</a>
                 <label for="TelefonoTextBox" class="col-md-3 control-label input-sm" style="font-size: large">Telefono</label>
                 <div class="col-md-7">
-                    <asp:TextBox ID="TelefonoTextBox" runat="server" placeholder="" class="form-control input-sm" Style="font-size: large"></asp:TextBox>
+                    <asp:TextBox ID="TelefonoTextBox" runat="server" placeholder="" class="form-control input-sm" Style="font-size: large" MaxLength="10"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="ValidaTelefono2" runat="server" ErrorMessage="El campo &quot;Telefono&quot; Esta vacio" ControlToValidate="TelefonoTextBox" ForeColor="Red" Display="Dynamic" ToolTip="Campo Telefono es obligatorio" ValidationGroup="Guardar">*</asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="ValidaTelefono" runat="server" ErrorMessage='El Campo &quot;Telefono&quot; solo acepta numeros' ControlToValidate="TelefonoTextBox" ValidationExpression="^[0-9]*$" Text="*" ForeColor="Red" Display="Dynamic" ToolTip="Entrada no valida" ValidationGroup="Guardar"></asp:RegularExpressionValidator>
-                    <asp:RangeValidator ID="TelefonoRangeValidator" runat="server" ErrorMessage="Digite un Telefono correcto" ControlToValidate="TelefonoTextBox" ValidationGroup="Guardar" Display="Dynamic" ForeColor="Red" MaximumValue="10" MinimumValue="10">*</asp:RangeValidator>
+                    <asp:RangeValidator ID="TelefonoRangeValidator" runat="server" ErrorMessage="Digite un Telefono correcto" ControlToValidate="TelefonoTextBox" ValidationGroup="Guardar" Display="Dynamic" ForeColor="Red" MaximumValue="9999999999" MinimumValue="10000000000">*</asp:RangeValidator>
 
                 </div>
                 <label for="CedulaTextBox" class="col-md-3 control-label input-sm" style="font-size: large">Cedula</label>
                 <div class="col-md-7">
-                    <asp:TextBox ID="CedulaTextBox" runat="server" class="form-control input-sm" Style="font-size: large"></asp:TextBox>
+                    <asp:TextBox ID="CedulaTextBox" runat="server" class="form-control input-sm" Style="font-size: large" MaxLength="11"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="ValidadCecula" runat="server" ErrorMessage="El campo &quot;Cedula&quot; esta vacio" ControlToValidate="CedulaTextBox" ForeColor="Red" Display="Dynamic" ToolTip="Campo Cedula obligatorio" ValidationGroup="Guardar">*</asp:RequiredFieldValidator>
-                    <asp:RangeValidator ID="CedulaRangeValidator" runat="server" ErrorMessage="Digite una cedula correcta" ControlToValidate="CedulaTextBox" ValidationGroup="Guardar" Display="Dynamic" ForeColor="Red" MaximumValue="11" MinimumValue="11">*</asp:RangeValidator>
+                    <asp:RangeValidator ID="CedulaRangeValidator" runat="server" ErrorMessage="Digite una cedula correcta" ControlToValidate="CedulaTextBox" ValidationGroup="Guardar" Display="Dynamic" ForeColor="Red" MaximumValue="99999999999" MinimumValue="100000000000" ToolTip="cedula invalida">*</asp:RangeValidator>
 
                 </div>
                 <label for="DireccionTextBox" class="col-md-3 control-label input-sm" style="font-size: large">Direccion</label>

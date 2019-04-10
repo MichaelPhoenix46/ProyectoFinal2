@@ -13,6 +13,8 @@
                 <asp:ListItem>Cedula</asp:ListItem>
                 <asp:ListItem>Direccion</asp:ListItem>
                 <asp:ListItem>Telefono</asp:ListItem>
+                <asp:ListItem>Fecha</asp:ListItem>
+
             </asp:DropDownList>
         </div>
         <div class="col-md-6">
@@ -22,15 +24,16 @@
             <asp:Button ID="BuscarButton" runat="server" Text="Buscar" class="btn btn-info btn-md" OnClick="BuscarButton_Click" />
         </div>
         <div class="col-md-1">
+
             <asp:CheckBox ID="FechaCheckBox" runat="server" />
         </div>
 
-        <div id="Desdediv" class="col-md-5" >
+        <div id="Desdediv" class="col-md-5">
             <label for="Desde" class="col-md-3 control-label input-sm" style="font-size: large">Desde</label>
             <br>
             <asp:TextBox ID="Desde" runat="server" class="form-control input-sm" Style="font-size: medium" TextMode="Date"></asp:TextBox>
         </div>
-        <div id="Hastadiv" class="col-md-5" >
+        <div id="Hastadiv" class="col-md-5">
             <label for="Hasta" class="col-md-3 control-label input-sm" style="font-size: large">Hasta</label>
             <br>
             <asp:TextBox ID="Hasta" runat="server" class="form-control input-sm" Style="font-size: medium" TextMode="Date"></asp:TextBox>
@@ -45,7 +48,7 @@
             <RowStyle BackColor="#EFF3FB" />
         </asp:GridView>
     </div>
-<%--    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <%--    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
     <script>
         $(document).ready(function(){
             #('#Hasta').hide;

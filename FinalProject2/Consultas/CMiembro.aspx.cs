@@ -23,7 +23,7 @@ namespace FinalProject2.Consultas
 
             Desde.Text = DateTime.Now.ToString("yyyy-MM-dd");
             Hasta.Text = DateTime.Now.ToString("yyyy-MM-dd");
-            
+
 
         }
 
@@ -95,6 +95,14 @@ namespace FinalProject2.Consultas
                         filtro = c => c.Telefono.Contains(CriterioTextBox.Text);
                         break;
                     }
+                case 6:
+
+                    if (FechaCheckBox.Checked == true)
+                    {
+                        filtro = c => c.FechaRegistro >= desde && c.FechaRegistro <= hasta;
+                        break;
+                    }
+                    else { break; }
             }
 
             DatosGridView.DataSource = repositorio.GetList(filtro);
@@ -103,7 +111,16 @@ namespace FinalProject2.Consultas
 
         protected void BuscarButton_Click(object sender, EventArgs e)
         {
-            Buscar();
+            if (CriterioTextBox.Text == string.Empty && FiltroDropDownList.Text != "Todo")
+                Utils.ShowToastr(this.Page, "Debe agregar un criterio", "Error", "error");
+            else
+            {
+                Buscar();
+                if (DatosGridView.Rows.Count == 0)
+                    Utils.ShowToastr(this.Page, "No se ha efectuado la busqueda", "Error", "error");
+                else
+                    Utils.ShowToastr(this.Page, "Busqueda completa", "Exito", "success");
+            }
         }
 
 
