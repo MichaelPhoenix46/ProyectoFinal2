@@ -103,6 +103,15 @@ namespace FinalProject2.Registros {
         protected global::System.Web.UI.WebControls.TextBox CantidadEjemplaresTextBox;
         
         /// <summary>
+        /// CantidadRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator CantidadRequiredFieldValidator;
+        
+        /// <summary>
         /// PlataformaTextBox control.
         /// </summary>
         /// <remarks>

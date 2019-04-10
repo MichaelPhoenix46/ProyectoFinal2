@@ -78,7 +78,6 @@ namespace BLL
 
             T entity;
             try
-
             {
                 entity = _contexto.Set<T>().Find(id);
             }

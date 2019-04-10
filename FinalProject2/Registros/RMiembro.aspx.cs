@@ -83,12 +83,17 @@ namespace FinalProject2.Registros
                 paso = repositorioBase.Modificar(miembro);
             if (paso)
             {
-                Utils.ShowToastr(this.Page, "Guardado con exito!!", "Guardado", "success");
+                Utils.ShowToastr(this.Page, "Guardado con exito", "Guardado", "success");
+            }else
+            {
+                Utils.ShowToastr(this.Page, "No se ha podido Guardar o modificiar", "Error", "error");
             }
         }
 
         protected void EliminarButton_Click(object sender, EventArgs e)
         {
+            if (MiembroIdTextBox.Text == string.Empty)
+                Utils.ShowToastr(this.Page, "El Campo Id esta vacio", "Error", "error");
             int id = Convert.ToInt32(MiembroIdTextBox.Text);
             RepositorioBase<Miembro> repositorio = new RepositorioBase<Miembro>();
             if (repositorio.Eliminar(id))
@@ -102,6 +107,8 @@ namespace FinalProject2.Registros
 
         protected void BuscarButton_Click(object sender, EventArgs e)
         {
+            if (MiembroIdTextBox.Text == string.Empty)
+                Utils.ShowToastr(this.Page, "El Campo Id esta vacio", "Error", "error");
             RepositorioBase<Miembro> repositorio = new RepositorioBase<Miembro>();
             var miembro = repositorio.Buscar(Utils.ToInt(MiembroIdTextBox.Text));
 

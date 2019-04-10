@@ -76,22 +76,22 @@ namespace FinalProject2.Registros {
         protected global::System.Web.UI.WebControls.TextBox CedulaTextBox;
         
         /// <summary>
-        /// RegularExpressionValidator1 control.
+        /// CedulaRangeValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+        protected global::System.Web.UI.WebControls.RangeValidator CedulaRangeValidator;
         
         /// <summary>
-        /// ValidadCedula control.
+        /// ValidadCecula control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidadCedula;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidadCecula;
         
         /// <summary>
         /// DireccionTextBox control.
@@ -146,6 +146,15 @@ namespace FinalProject2.Registros {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator ValidaTelefono;
+        
+        /// <summary>
+        /// TelefonoRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator TelefonoRangeValidator;
         
         /// <summary>
         /// FechaTextBox control.

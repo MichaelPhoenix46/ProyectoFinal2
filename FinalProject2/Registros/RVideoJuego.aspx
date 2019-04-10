@@ -36,13 +36,15 @@
                     <label for="CantidadEjemplaresTextBox" class="col-md-4 control-label input-sm" style="font-size: large">CantidadEjemplares</label>
 
                     <asp:TextBox ID="CantidadEjemplaresTextBox" runat="server" class="form-control input-sm" Style="font-size: large" TextMode="Number"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="CantidadRequiredFieldValidator" runat="server" ErrorMessage="El campo &quot;Cantidad de ejemplares&quot; Esta vacio" ControlToValidate="CantidadEjemplaresTextBox" ForeColor="Red" Display="Dynamic" ValidationGroup="Guardar">*</asp:RequiredFieldValidator>
+
                 </div>
                 <div class="col-md-7">
                     <label for="PlataformaTextBox" class="col-md-4 control-label input-sm" style="font-size: large">Plataforma</label>
 
                     <asp:TextBox ID="PlataformaTextBox" runat="server" class="form-control input-sm" Style="font-size: large"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="ValidaPlataforma" runat="server" ErrorMessage="El campo &quot;Plataforma&quot; Esta vacio" ControlToValidate="PlataformaTextBox" ForeColor="Red" Display="Dynamic" ToolTip="Campo Titulo es obligatorio" ValidationGroup="Guardar">*</asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="ValidaPlataforma2" runat="server" ErrorMessage='El Campo &quot;Plataforma&quot; solo acepta letras' ControlToValidate="PlataformaTextBox" ValidationExpression="^[A-Za-z#0-9]*$" Text="*" ForeColor="Red" Display="Dynamic" ToolTip="Entrada no valida" ValidationGroup="Guardar"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="ValidaPlataforma2" runat="server" ErrorMessage='El Campo &quot;Plataforma&quot; solo acepta letras' ControlToValidate="PlataformaTextBox" ValidationExpression="^[A-Za-z0-9]*$" Text="*" ForeColor="Red" Display="Dynamic" ToolTip="Entrada no valida" ValidationGroup="Guardar"></asp:RegularExpressionValidator>
                 </div>
             </div>
             <div class="col-md-7">
